@@ -19,9 +19,6 @@ public class BaseTest {
 
     @BeforeEach
     public void beforeTest() {
-        step("открываем главную страницу", () -> {
-            open("https://www.wildberries.ru/");
-        });
 
         Configuration.browser = System.getProperty("browser", "chrome");
         Configuration.browserSize = System.getProperty("browserSize", "1920x1080");
@@ -37,6 +34,10 @@ public class BaseTest {
 
 
         Configuration.browserCapabilities = capabilities;
+
+        step("открываем главную страницу", () -> {
+            open("https://www.wildberries.ru/");
+        });
     }
 
     @BeforeEach
