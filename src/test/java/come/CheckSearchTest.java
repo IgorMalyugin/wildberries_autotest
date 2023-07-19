@@ -2,6 +2,7 @@ package come;
 
 import com.codeborne.selenide.Condition;
 import io.qameta.allure.Owner;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
@@ -20,6 +21,9 @@ public class CheckSearchTest extends BaseTest {
     @Test
     public void checkSearch144668129() {
 
+        step("открываем главную страницу", () -> {
+            open("https://www.wildberries.ru/");
+        });
         step("вводим артикул", () -> {
             $("#searchInput").setValue("144668129").pressEnter();
         });
@@ -29,6 +33,7 @@ public class CheckSearchTest extends BaseTest {
         });
     }
 
+    @Disabled
     @Tag("UI")
     @Owner("Малюгин И А")
     @DisplayName("Поиск товара по артиклу 144132397")

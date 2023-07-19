@@ -2,7 +2,7 @@
   "base": {
     "logo": "",
     "project": "QA GURU",
-    "environment": "PROD",
+    "environment": "UI",
     "comment": "Test_QA",
     "reportLink": "",
     "language": "en",
