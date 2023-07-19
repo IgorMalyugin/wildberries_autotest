@@ -31,8 +31,6 @@ public class BaseTest {
             put("enableVCN", true);
             put("enableVideo", true);
         }});
-
-
         Configuration.browserCapabilities = capabilities;
 
         step("открываем главную страницу", () -> {
