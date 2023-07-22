@@ -53,8 +53,3 @@ gradle clean ui_test
 <p align="center">
 <img title="Jenkins Build" src="images/screens/tg.png">
 </p>
-
-### Пример видео выполнения теста на Selenoid
-<p align="center">
-  <img title="Selenoid Video" src="images/screens/video.gif">
-</p>
