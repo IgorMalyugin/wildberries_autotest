@@ -33,9 +33,9 @@ public class BaseTest {
         }});
         Configuration.browserCapabilities = capabilities;
 
-//        step("открываем главную страницу", () -> {
-//            open("https://www.wildberries.ru/");
-//        });
+        step("открываем главную страницу", () -> {
+            open("https://www.wildberries.ru/");
+        });
     }
 
     @BeforeEach
