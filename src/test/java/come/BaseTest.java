@@ -17,6 +17,8 @@ import static io.qameta.allure.Allure.step;
 
 public class BaseTest {
 
+    Page page = new Page();
+
     @BeforeEach
     public void beforeTest() {
 

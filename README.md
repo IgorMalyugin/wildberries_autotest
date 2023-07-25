@@ -14,7 +14,11 @@
 </p>
 
 ### Реализованные проверки:
-* Поиск товара по артиклу с главной странице сайта
+* Поиск товара по артикулу
+* Поиск товара по наименованию
+* Проверка добавнения товара в корзину
+* Проверка валюты
+* Проверка локации
 
 
 #### Удаленный запуск тестов с параметрами:
@@ -24,7 +28,7 @@ gradle clean ui_test
 -Dbrowser=${BROWSER}
 -DbrowserVersion=${BROWSER_VERSION}
 -DbrowserSize=${BROWSER_SIZE}
--DremoteDriverUrl=https://user1:1234@${REMOTE_DRIVER_URL}/wd/hub/
+-DremoteDriverUrl=https://${REMOTE_DRIVER_URL}/wd/hub/
 ```
 где:
 
