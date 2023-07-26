@@ -17,7 +17,10 @@ import static io.qameta.allure.Allure.step;
 
 public class BaseTest {
 
-    Page page = new Page();
+    MainPage mainPage = new MainPage();
+    ProductPage productPage = new ProductPage();
+    BasketPage basketPage = new BasketPage();
+    SearchPage searchPage = new SearchPage();
 
     @BeforeEach
     public void beforeTest() {

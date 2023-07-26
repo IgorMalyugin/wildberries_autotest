@@ -12,9 +12,10 @@ public class CheckSearchTest extends BaseTest {
     @DisplayName("Поиск товара по артиклу")
     @Test
     public void checkSearchArtTest() {
-        page
-                .waitPage()
-                .setInput("144668129")
+        mainPage
+                .waitForPageIsLoaded()
+                .setSearchInput("144668129");
+        productPage
                 .checkArticle("Scarlett Погружной блендер");
     }
 
@@ -24,9 +25,10 @@ public class CheckSearchTest extends BaseTest {
     @DisplayName("Поиск товара по наименованию")
     @Test
     public void checkSearchNameTest() {
-        page
-                .waitPage()
-                .setInput("Polaris Робот пылесос PVCR 0826")
+        mainPage
+                .waitForPageIsLoaded()
+                .setSearchInput("Polaris Робот пылесос PVCR 0826");
+        searchPage
                 .checkProduct("найдено");
     }
 
@@ -35,27 +37,29 @@ public class CheckSearchTest extends BaseTest {
     @DisplayName("Проверка добавления товара в корзину")
     @Test
     public void checkAddProductTest() {
-        page
-                .waitPage()
-                .setInput("6170053")
-                .addProductInBasket("Добавить в корзину")
-                .openBasket("Корзина")
-                .checkBasket("1");
+        mainPage
+                .waitForPageIsLoaded()
+                .setSearchInput("6170053");
+        productPage
+                .addProductInBasket()
+                .openBasket();
+        basketPage.checkBasketCount("1");
 
     }
+
     @Tag("UI")
     @Owner("Малюгин И А")
     @DisplayName("Проверка валюты")
     @Test
-    public void checkCurrencyTest(){
-        page.checkCurrency("RUB");
+    public void checkCurrencyTest() {
+        mainPage.checkCurrency("RUB");
     }
 
     @Tag("UI")
     @Owner("Малюгин И А")
     @DisplayName("Проверка локации")
     @Test
-    public void checkCurrencyLocation(){
-        page.checkLocation("Москва");
+    public void checkCurrencyLocation() {
+        mainPage.checkLocation("Москва");
     }
 }
