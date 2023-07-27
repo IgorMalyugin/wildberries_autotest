@@ -1,4 +1,4 @@
-package come;
+package ru.wildberries.pages;
 
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.SelenideElement;
@@ -6,11 +6,13 @@ import io.qameta.allure.Step;
 
 import static com.codeborne.selenide.Selenide.$;
 
-public class ProductPage {
+public class ProductPage extends BasePage{
     SelenideElement
             addProductInBasket = $(".product-page__aside-sticky .order"),
             openBasket = $(".header__navbar-pc .j-item-basket .navbar-pc__icon"),
             headerNameProduct = $(".product-page__header");
+
+
 
     @Step("добавляем товар в корзину")
     public ProductPage addProductInBasket() {

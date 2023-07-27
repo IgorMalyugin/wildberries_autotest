@@ -1,4 +1,4 @@
-package come;
+package ru.wildberries.tests;
 
 import io.qameta.allure.Owner;
 import org.junit.jupiter.api.DisplayName;
@@ -61,5 +61,22 @@ public class CheckSearchTest extends BaseTest {
     @Test
     public void checkCurrencyLocation() {
         mainPage.checkLocation("Москва");
+    }
+
+    @Tag("UI")
+    @Owner("Малюгин И А")
+    @DisplayName("Проверка добавления товара в корзину")
+    @Test
+    public void checkAddProductTestУxample() {
+        mainPage
+                .waitForPageIsLoaded()
+                .getHeaderComponent()
+                .setSearchInput("6170053");
+        productPage
+                .addProductInBasket()
+                .getHeaderComponent()
+                .openBasket();
+        basketPage
+                .checkBasketCount("1");
     }
 }

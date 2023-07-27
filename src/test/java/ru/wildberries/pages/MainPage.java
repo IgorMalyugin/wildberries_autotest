@@ -1,4 +1,4 @@
-package come;
+package ru.wildberries.pages;
 
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.SelenideElement;
@@ -6,7 +6,7 @@ import io.qameta.allure.Step;
 
 import static com.codeborne.selenide.Selenide.$;
 
-public class MainPage {
+public class MainPage extends BasePage{
 
     SelenideElement
             inputSearch = $("#searchInput"),

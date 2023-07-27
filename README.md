@@ -1,5 +1,5 @@
 # Проект по автоматизации тестирования www.wildberries.ru
-
+____
 ### Технологии и инструменты:
 <p align="center">
 <img src="images/logos/Intelij_IDEA.svg" width="50" height="50"  alt="IDEA"/>
@@ -13,13 +13,15 @@
 <img src="images/logos/Jenkins.svg" width="50" height="50"  alt="Jenkins"/>
 </p>
 
+____
+
 ### Реализованные проверки:
 * Поиск товара по артикулу
 * Поиск товара по наименованию
-* Проверка добавнения товара в корзину
+* Проверка добавления товара в корзину
 * Проверка валюты
 * Проверка локации
-
+____
 
 #### Удаленный запуск тестов с параметрами:
 
@@ -36,22 +38,32 @@ gradle clean ui_test
 - <code>BROWSER_VERSION</code> – версия браузера, в которой будут выполняться тесты.
 - <code>BROWSER_SIZE</code> – размер окна браузера, в котором будут выполняться тесты.
 - <code>REMOTE_DRIVER_URL</code> – адрес удаленного сервера, на котором будут запускаться тесты.
+____
+<a id="jenkins"></a>
+## <img alt="Jenkins" height="25" src="images/logos/Jenkins.svg" width="25"/></a><a name="Сборка"></a>Сборка в [Jenkins](https://jenkins.autotests.cloud/job/qa_guru_jenkins_wb/)</a>
+____
 
-### Сборка в Jenkins
-<p align="center">
-<img title="Jenkins Build" src="images/screens/Jenkins.png">
+<p align="center">  
+<a href="https://jenkins.autotests.cloud/job/qa_guru_jenkins_wb/"><img src="images/screens/Jenkins.png" alt="Jenkins" width="850"/></a>  
 </p>
 
-### Отчет в Allure report
+___
+<a id="allure"></a>
+## <img alt="Allure" height="25" src="images/logos/Allure_Report.svg" width="25"/></a> <a name="Allure"></a>Allure [отчет](https://jenkins.autotests.cloud/job/qa_guru_jenkins_wb/allure/)</a>
+___
 #### Основная страница отчета
-<p align="center">
-<img title="Jenkins Build" src="images/screens/Allure-report.png">
-</p>
+<p align="center">  
+<img title="Allure Overview Dashboard" src="images/screens/Allure-report.png" width="850">  
+</p>  
+
+____
 
 #### Тест-кейсы
-<p align="center">
-<img title="Jenkins Build" src="images/screens/Allure-tests.png">
+<p align="center">  
+<img title="Allure Overview Dashboard" src="images/screens/Allure-tests.png" width="850">  
 </p>
+
+____
 
 ### Уведомления в Telegram с использованием бота
 <p align="center">

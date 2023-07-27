@@ -1,12 +1,16 @@
-package come;
+package ru.wildberries.tests;
 
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.logevents.SelenideLogger;
-import helpers.Attach;
+import ru.wildberries.helpers.Attach;
 import io.qameta.allure.selenide.AllureSelenide;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.openqa.selenium.remote.DesiredCapabilities;
+import ru.wildberries.pages.BasketPage;
+import ru.wildberries.pages.MainPage;
+import ru.wildberries.pages.ProductPage;
+import ru.wildberries.pages.SearchPage;
 
 import java.util.HashMap;
 
