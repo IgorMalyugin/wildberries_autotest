@@ -14,6 +14,7 @@ public class CheckSearchTest extends BaseTest {
     public void checkSearchArtTest() {
         mainPage
                 .waitForPageIsLoaded()
+                .getHeaderComponent()
                 .setSearchInput("144668129");
         productPage
                 .checkArticle("Scarlett Погружной блендер");
@@ -27,56 +28,11 @@ public class CheckSearchTest extends BaseTest {
     public void checkSearchNameTest() {
         mainPage
                 .waitForPageIsLoaded()
+                .getHeaderComponent()
                 .setSearchInput("Polaris Робот пылесос PVCR 0826");
         searchPage
                 .checkProduct("найдено");
     }
 
-    @Tag("UI")
-    @Owner("Малюгин И А")
-    @DisplayName("Проверка добавления товара в корзину")
-    @Test
-    public void checkAddProductTest() {
-        mainPage
-                .waitForPageIsLoaded()
-                .setSearchInput("6170053");
-        productPage
-                .addProductInBasket()
-                .openBasket();
-        basketPage.checkBasketCount("1");
 
-    }
-
-    @Tag("UI")
-    @Owner("Малюгин И А")
-    @DisplayName("Проверка валюты")
-    @Test
-    public void checkCurrencyTest() {
-        mainPage.checkCurrency("RUB");
-    }
-
-    @Tag("UI")
-    @Owner("Малюгин И А")
-    @DisplayName("Проверка локации")
-    @Test
-    public void checkCurrencyLocation() {
-        mainPage.checkLocation("Москва");
-    }
-
-    @Tag("UI")
-    @Owner("Малюгин И А")
-    @DisplayName("Проверка добавления товара в корзину")
-    @Test
-    public void checkAddProductTestУxample() {
-        mainPage
-                .waitForPageIsLoaded()
-                .getHeaderComponent()
-                .setSearchInput("6170053");
-        productPage
-                .addProductInBasket()
-                .getHeaderComponent()
-                .openBasket();
-        basketPage
-                .checkBasketCount("1");
-    }
 }

@@ -10,6 +10,7 @@ public class SearchPage {
 
     SelenideElement listProducts = $(".searching-results__title");
 
+
     @Step("проверяем результат поиска по наименованию")
     public SearchPage checkProduct(String value) {
         listProducts.shouldHave(Condition.text(value));

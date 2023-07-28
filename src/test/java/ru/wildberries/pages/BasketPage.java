@@ -15,4 +15,5 @@ public class BasketPage {
         checkBasket.shouldHave(Condition.text(value));
         return this;
     }
+
 }

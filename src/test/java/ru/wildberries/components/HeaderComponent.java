@@ -1,11 +1,12 @@
-package ru.wildberries.pages;
+package ru.wildberries.components;
 
 import com.codeborne.selenide.SelenideElement;
 import io.qameta.allure.Step;
+import ru.wildberries.pages.BasePage;
 
 import static com.codeborne.selenide.Selenide.$;
 
-public class HeaderComponent extends BasePage{
+public class HeaderComponent extends BasePage {
     SelenideElement
             inputSearch = $("#searchInput"),
             openBasket = $(".header__navbar-pc .j-item-basket .navbar-pc__icon");
@@ -22,4 +23,6 @@ public class HeaderComponent extends BasePage{
         openBasket.click();
         return this;
     }
+
+
 }

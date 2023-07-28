@@ -6,19 +6,10 @@ import io.qameta.allure.Step;
 
 import static com.codeborne.selenide.Selenide.$;
 
-public class ProductPage extends BasePage{
-    SelenideElement
-            addProductInBasket = $(".product-page__aside-sticky .order"),
-            openBasket = $(".header__navbar-pc .j-item-basket .navbar-pc__icon"),
-            headerNameProduct = $(".product-page__header");
+public class ProductPage extends BasePage {
 
-
-
-    @Step("добавляем товар в корзину")
-    public ProductPage addProductInBasket() {
-        addProductInBasket.click();
-        return this;
-    }
+    SelenideElement headerNameProduct = $(".product-page__header"),
+            addProductInBasket = $(".product-page__aside-sticky .order");
 
     @Step("проверяем результат поиска по артиклу")
     public ProductPage checkArticle(String value) {
@@ -26,9 +17,11 @@ public class ProductPage extends BasePage{
         return this;
     }
 
-    @Step("открываем корзину")
-    public ProductPage openBasket() {
-        openBasket.click();
+    @Step("добавляем товар в корзину")
+    public ProductPage addProductInBasket() {
+        addProductInBasket.click();
         return this;
     }
+
+
 }

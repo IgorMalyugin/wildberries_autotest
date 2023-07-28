@@ -6,20 +6,12 @@ import io.qameta.allure.Step;
 
 import static com.codeborne.selenide.Selenide.$;
 
-public class MainPage extends BasePage{
+public class MainPage extends BasePage {
 
     SelenideElement
-            inputSearch = $("#searchInput"),
             checkCurrency = $(".simple-menu__currency"),
             checkLocation = $(".simple-menu__link--address"),
             waitBanner = $(".main-page__banner");
-
-    @Step("вводим наименование")
-    public MainPage setSearchInput(String value) {
-        inputSearch.setValue(value)
-                .pressEnter();
-        return this;
-    }
 
 
     @Step("проверяем установленную валюту")
