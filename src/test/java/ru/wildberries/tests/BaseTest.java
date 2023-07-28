@@ -35,6 +35,7 @@ public class BaseTest {
         Configuration.pageLoadStrategy = "eager";
         Configuration.remote = System.getProperty("remoteDriverUrl", "https://user1:1234@selenoid.autotests.cloud/wd/hub");
 
+
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability("selenoid:options", new HashMap<String, Object>() {{
             put("enableVCN", true);
